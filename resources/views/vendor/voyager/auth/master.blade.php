@@ -14,8 +14,10 @@
     @endif
     <style>
         body {
-            background-image:url('{{ Voyager::image( Voyager::setting("admin.bg_image"), voyager_asset("images/bg.jpg") ) }}');
-            background-color: {{ Voyager::setting("admin.bg_color", "#FFFFFF" ) }};
+            /* background-image:url('{{ Voyager::image( Voyager::setting("admin.bg_image"), voyager_asset("images/bg.jpg") ) }}'); */
+            background-image:url('https://www.snhu.edu/-/media/images/social/og/finance-degree-cryptocurrency-og.ashx');
+            /* background-color: {{ Voyager::setting("admin.bg_color", "#FFFFFF" ) }}; */
+           
         }
         body.login .login-sidebar {
             border-top:5px solid {{ config('voyager.primary_color','#22A7F0') }};
@@ -49,15 +51,12 @@
             <div class="clearfix">
                 <div class="col-sm-12 col-md-10 col-md-offset-2">
                     <div class="logo-title-container">
-                        <?php $admin_logo_img = Voyager::setting('admin.icon_image', ''); ?>
-                        @if($admin_logo_img == '')
-                            <img class="img-responsive pull-left flip logo hidden-xs animated fadeIn" src="{{ voyager_asset('images/logo-icon-light.png') }}" alt="Logo Icon">
-                        @else
-                            <img class="img-responsive pull-left flip logo hidden-xs animated fadeIn" src="{{ Voyager::image($admin_logo_img) }}" alt="Logo Icon">
-                        @endif
+                     
                         <div class="copy animated fadeIn hello">
                             <h1>CRYPTO SERVICES</h1>
-                            <p style="color:rgb(248, 175, 18);">Welcome to our website for providing all kind of crypto trading services</p>
+                           
+                            <p> Welcome to our website for providing all kind of crypto trading services</p>
+                            <h5 style="margin-left:20px">By Elie Azar</h5>
                         </div>
                     </div> <!-- .logo-title-container -->
                 </div>

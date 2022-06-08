@@ -21,3 +21,6 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/', 'App\Http\Controllers\ServiceController@web_index');
+
