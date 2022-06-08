@@ -11,11 +11,8 @@
 
     <title>Crypto Services- by Elie Azar</title>
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+  @include('web-layout.css-link')
+   
 
     </head>
     
@@ -33,55 +30,13 @@
     
     
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="#" class="logo" >
-                            <img  style="padding:10px;  border-radius: 90px"src="assets/images/lazarusfx-logo.jpeg" width="78" height="78" alt="Softy Pinko"/>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="#welcome" class="active">Home</a></li>
-                            <li><a href="#features">About</a></li>
-                            <li><a href="#work-process">Work Process</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#pricing-plans">Pricing Tables</a></li>
-                            <li><a href="#blog">Blog Entries</a></li>
-                            <li><a href="#contact-us">Contact Us</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+   
+    @include('web-layout.navigation-bar')
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome">
-
-        <!-- ***** Header Text Start ***** -->
-        <div class="header-text">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1>We provide the best <strong>strategy</strong><br>to grow up your <strong>business</strong></h1>
-                        <p>Softy Pinko is a professional Bootstrap 4.0 theme designed by Template Mo 
-                        for your company at absolutely free of charge</p>
-                        <a href="#features" class="main-button-slider">Discover More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ***** Header Text End ***** -->
-    </div>
+    @include('web-layout.header')
+   
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Features Small Start ***** -->
@@ -95,8 +50,11 @@
                         {{-- map the services here --}}
                         @foreach ($services as $service)
                                   
-                                    
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" 
+                        
+                        data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                        <a href='{{route('service',"id=$service->id")}}'>    
                             <div class="features-small-item">
                                 <div class="icon">
                                     <i><img src="http://localhost:8000/storage/{{$service->image}}"  width="90px" height="90px" alt=""></i>
@@ -104,6 +62,7 @@
                                 <h5 class="features-title">{{$service->name}}</h5>
                                 <p>{{$service->description}}</p>
                             </div>
+                        </a>    
                         </div>
                         @endforeach
                         <!-- ***** Features Small Item End ***** -->
@@ -531,42 +490,9 @@
     <!-- ***** Contact Us End ***** -->
     
     <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <ul class="social">
-                        <li><a href="https://www.facebook.com/elie.azar.joker" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/azar-e-400a9120b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="mailto:eke004@live.aul.edu.lb" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright">Copyright &copy; 2022 Elie Azar - crypto services</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+  @include('web-layout.footer')
+  @include('web-layout.js-link')
     
-    <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
-
-    <!-- Bootstrap -->
-    {{-- <script src="assets/js/popper.js"></script> --}}
-    {{-- <script src="assets/js/bootstrap.min.js"></script> --}}
-
-    <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
 
   </body>
 </html>

@@ -23,4 +23,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/', 'App\Http\Controllers\ServiceController@web_index');
+Route::get('/service', 'App\Http\Controllers\ServiceController@web_view')->name('service');
 

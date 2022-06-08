@@ -16,4 +16,12 @@ class ServiceController extends BaseVoyagerController
         Log::info($services);
         return view('welcome')->with(compact('services'));
     }
+
+    public function web_view(){
+        $id = request()->id;
+        Log::info("service details");
+        $service = Service::find($id);
+        Log::info($service);
+        return view('service-details')->with(compact('service'));
+    }
 }
