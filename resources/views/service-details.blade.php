@@ -4,10 +4,54 @@
 @include('web-layout.css-link')
 
 <div class="center">
-
+   
  <div class="service-conten">
-  
-    <div class="card green">
+     <div class="paybtn mb-4">     
+    <button class="btn btn-danger mb-4" onclick="showsection()">
+        Get Service
+    </button></div>
+
+    <div class="row">
+        <div class="col">
+            <form hidden name="payform" class="payform"action="{{route('pay')}}" method="post">
+            
+
+                <table>
+                    
+                    <tr>
+                        <td><input class="form-control" placeholder="your name"type='text' name='name'></td>
+                        <td> 
+                <input class="form-control" type='number' placeholder="card number" name='cardnumber'>
+
+                        </td>
+                        <td>
+                <input class="form-control" placeholder="03-Aug-2024" type='date' name='expirydate'>
+
+                        </td>
+                        <td>
+
+                <input  class="form-control" type='number' name='price' value={{$service->price}}>
+
+                        </td>
+                        <td>
+
+                            <input hidden type='number' name='serviceid' value={{$service->id}}>
+                            <input hidden type='text' name='servicename' value={{$service->name}}>
+                        </td>
+                        <td>
+
+                <input  type="submit" name="submit" class="btn btn-success">
+
+                        </td>
+                    </tr>
+                    
+                </table>
+                <img class="paycard"src="assets/images/creditcard.png" heigh="150px" width="300px"/>
+            </form>
+        </div>
+    </div>
+
+    <div id="cardgreen" class="card green">
       <div class="additional">
         <div class="user-card">
           <div class="level center">
@@ -25,8 +69,8 @@
             <span>Joined January 2019</span>
           </div>
           <div class="coords">
-            <span>Position/Role</span>
-            <span>City, Country</span>
+            <span>Price</span>
+            <span>{{$service->price}} USD</span>
           </div>
           <div class="stats">
             <div>
@@ -49,8 +93,9 @@
         </div>
       </div>
       <div class="general">
-        <h1>Jane Doe</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+        <h1>{{$service->name}}</h1>
+        <p>{{$service->description}}</p>
+        <p>{{$service->price}} USD</p>
         <span class="more">Mouse over the card for more info</span>
       </div>
     </div>

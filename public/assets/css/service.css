@@ -15,6 +15,12 @@
   -webkit-transform: translate(-50%, -50%);
 }
 
+.paybtn{
+    margin-left: 45%;
+}
+.paycard{
+    margin-left: 30%;
+}
 .card {
   width: 750px;
   height: 250px;
@@ -90,7 +96,7 @@
 }
 
 .card .additional .more-info {
-  width: 300px;
+  width: 600px;
   float: left;
   position: absolute;
   left: 150px;

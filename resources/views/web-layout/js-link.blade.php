@@ -11,6 +11,7 @@
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/service.js"></script> 
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>

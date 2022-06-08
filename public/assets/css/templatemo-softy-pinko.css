@@ -406,7 +406,7 @@ header
   margin-left: 30px;
   padding: 10px;
 }
-.header-area .main-nav .logo, img:hover{
+.headlogo:hover{
   transform: scale(1.9);
 }
 

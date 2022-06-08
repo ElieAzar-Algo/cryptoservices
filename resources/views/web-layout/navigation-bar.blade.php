@@ -5,7 +5,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo" >
-                        <img  style="padding:10px;  border-radius: 90px"src="assets/images/lazarusfx-logo.jpeg" width="78" height="78" alt="Softy Pinko"/>
+                        <img class="headlogo" style="padding:10px;  border-radius: 90px"src="assets/images/lazarusfx-logo.jpeg" width="78" height="78" alt="Softy Pinko"/>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->

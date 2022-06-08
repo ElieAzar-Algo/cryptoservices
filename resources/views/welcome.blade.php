@@ -57,7 +57,7 @@
                         <a href='{{route('service',"id=$service->id")}}'>    
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="http://localhost:8000/storage/{{$service->image}}"  width="90px" height="90px" alt=""></i>
+                                    <i><img class="headlogo" src="http://localhost:8000/storage/{{$service->image}}"  width="90px" height="90px" alt=""></i>
                                 </div>
                                 <h5 class="features-title">{{$service->name}}</h5>
                                 <p>{{$service->description}}</p>
