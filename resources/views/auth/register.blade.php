@@ -1,42 +1,44 @@
-@extends('voyager::auth.master')
+@extends('auth.registermaster')
 
 @section('content')
     <div class="login-container">
 
         <p>{{ __('voyager::login.signin_below') }}</p>
 
-        <form action="{{ route('voyager.login') }}" method="POST">
+        <form action="{{ route('postregister') }}" method="POST">
             {{ csrf_field() }}
+            <input type='number' name='role_id' hidden value='2'/>
+            <input type='number' name='avatar' hidden value='users/default.png'/>
+            <input type='number' name='settings' hidden value=''/>
+            
             <div class="form-group form-group-default" id="emailGroup">
-                <label>{{ __('voyager::generic.email') }}</label>
+                <label>Name</label>
                 <div class="controls">
-                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="{{ __('voyager::generic.email') }}" class="form-control" required>
+                    <input type="text" name="name" id="name" value="{{ old('email') }}" placeholder="name" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group form-group-default" id="emailGroup">
+                <label>email</label>
+                <div class="controls">
+                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email" class="form-control" required>
                 </div>
             </div>
 
             <div class="form-group form-group-default" id="passwordGroup">
-                <label>{{ __('voyager::generic.password') }}</label>
+                <label>Password</label>
                 <div class="controls">
-                    <input type="password" name="password" placeholder="{{ __('voyager::generic.password') }}" class="form-control" required>
+                    <input type="password" name="password" placeholder="password" class="form-control" required>
                 </div>
             </div>
 
-            <div class="form-group" id="rememberMeGroup">
-                <div class="controls">
-                    <input type="checkbox" name="remember" id="remember" value="1"><label for="remember" class="remember-me-text">{{ __('voyager::generic.remember_me') }}</label>
-                </div>
-            </div>
 
             <button type="submit" class="btn btn-block login-button" style="margin-right:10px">
-                <span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
-                <span class="signin">{{ __('voyager::generic.login') }}</span>
+                <span class="signingin hidden"><span class="voyager-refresh"></span> Register</span>
+                <span class="signin">Register</span>
             </button>
 
         </form>
-        <a href="/registerform">   <button class="btn btn-success login-button">
-            <span class="signingin hidden"><span class="voyager-refresh"></span> Register</span>
-            <span class="signin">Register</span>
-        </button></a>
+        <a href="/admin/login"> Login</a>
         <div style="clear:both"></div>
 
         @if(!$errors->isEmpty())
