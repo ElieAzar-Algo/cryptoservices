@@ -6,16 +6,25 @@
 <div class="center">
    
  <div class="service-conten">
-     <div class="paybtn mb-4">     
+     <div class="paybtn mb-4"> 
+       
+      @auth
     <button class="btn btn-danger mb-4" onclick="showsection()">
         Get Service
-    </button></div>
+    </button>
+    @else
+   <a href='/pleasesignin'> <button class="btn btn-danger mb-4">
+        Get Service
+    </button>
+  </a>
+    @endauth
+  </div>
 
     <div class="row">
         <div class="col">
-            <form hidden name="payform" class="payform"action="{{route('pay')}}" method="post">
+            <form hidden name="payform" class="payform" action="{{route('pay')}}" method="post">
             
-
+              @csrf
                 <table>
                     
                     <tr>

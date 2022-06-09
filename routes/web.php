@@ -24,5 +24,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/', 'App\Http\Controllers\ServiceController@web_index');
 Route::get('/service', 'App\Http\Controllers\ServiceController@web_view')->name('service');
+Route::get('/pleasesignin', 'App\Http\Controllers\ServiceController@web_pleasesignin')->name('pleasesignin');
 Route::post('/pay', 'App\Http\Controllers\ServiceController@web_pay')->name('pay');
 

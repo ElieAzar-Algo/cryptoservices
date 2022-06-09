@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Service;
+use App\Models\Payment;
 
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
 
@@ -26,8 +27,28 @@ class ServiceController extends BaseVoyagerController
     }
 
     public function web_pay(){
-        $request = request();
-        Log::info($request);
+        Log::info("payy");
+       $request=request();
+       Log::info($request);
+       $payment = Payment::create([
+           'userid'=>auth()->id(),
+           'serviceid'=>$request->serviceid,
+          
+           'name'=>$request->name,
+           'cardnumber'=>$request->cardnumber,
+           'expirydate'=>$request->expirydate,
+           'servicename'=>$request->servicename,
+           'price'=>$request->price,
+
+       ]);
+
+        return view('thankyou')->with(compact('payment'));
+       
+    }
+
+    public function web_pleasesignin(){
+    
+        return view('pleasesignin');
        
     }
 
