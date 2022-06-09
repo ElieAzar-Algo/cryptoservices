@@ -1,4 +1,4 @@
-@include('web-layout.navigation-bar')
+@include('web-layout.navigation-bar2')
 @include('web-layout.css-link')
     <!-- ***** Contact Us Start ***** -->
     <section class="section colored" id="contact-us">

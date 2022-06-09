@@ -11,14 +11,13 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="/" class="active">Home</a></li>
-                        <li><a href="#features">About</a></li>
-                        <li><a href="#work-process">Work Process</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#pricing-plans">Pricing Tables</a></li>
+                      
                         <li><a href="/contactus">Contact Us</a></li>
                         @auth
                         <li><a href={{route('logout')}}>Logout</a></li>
                         @else
+                        <li><a href="/admin/login">Login</a></li>
+                        <li><a href="/registerform">Register</a></li>
                         @endauth
                     </ul>
                     <a class='menu-trigger'>

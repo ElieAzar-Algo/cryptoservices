@@ -1,6 +1,6 @@
 
 
-@include('web-layout.navigation-bar')
+@include('web-layout.navigation-bar2')
 @include('web-layout.css-link')
 
 <div class="center">
