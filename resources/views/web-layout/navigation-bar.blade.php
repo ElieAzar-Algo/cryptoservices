@@ -16,7 +16,7 @@
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#pricing-plans">Pricing Tables</a></li>
                         <li><a href="#blog">Blog Entries</a></li>
-                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a href="/contactus">Contact Us</a></li>
                         @auth
                         <li><a href={{route('logout')}}>Logout</a></li>
                         @else

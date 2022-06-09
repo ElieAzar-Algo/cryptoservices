@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Service;
 use App\Models\Payment;
-
+use Illuminate\Support\Facades\Request as FacadesRequest;
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
 
 class ServiceController extends BaseVoyagerController
@@ -24,6 +25,20 @@ class ServiceController extends BaseVoyagerController
         $service = Service::find($id);
         Log::info($service);
         return view('service-details')->with(compact('service'));
+    }
+
+    public function web_message(){
+        $request= request();
+        Log::info($request);
+       
+        Message::create([
+            'name'=>$request->name,
+            'userid'=>(integer)$request->userid,
+            'email'=>$request->email,
+            'message'=>$request->message
+        ]);
+        
+        return redirect()->route('home');
     }
 
     public function web_pay(){
@@ -51,5 +66,12 @@ class ServiceController extends BaseVoyagerController
         return view('pleasesignin');
        
     }
+
+    public function web_contactus(){
+    
+        return view('contactus');
+       
+    }
+
 
 }
