@@ -117,7 +117,7 @@
                 @foreach($coins as $coin)
 
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
+                        <a href={{route('coin',"id=$coin->id")}} class="mini-box">
                             <i><img src="http://localhost:8000/storage/{{$coin->image}}"  width="60px" height="60px" alt=""></i>
                             <strong>{{$coin->name}}</strong>
                             <span>{{$coin->value}}USD/coin</span>

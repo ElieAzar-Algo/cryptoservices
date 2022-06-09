@@ -23,8 +23,7 @@
     }
 </style>
 <body>
-    <a href="/" style="color: inherit;
-    text-decoration: inherit;">
+    <a href="/" style="color: inherit; text-decoration: inherit;">
 	<header class="site-header" id="header">
 		<h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU {{$payment->name}}!</h1>
 	</header>

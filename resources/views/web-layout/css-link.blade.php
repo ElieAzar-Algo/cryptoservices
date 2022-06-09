@@ -4,3 +4,4 @@
 
 <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
 <link rel="stylesheet" href="assets/css/service.css">
+<link rel="stylesheet" href="assets/css/coin.css">

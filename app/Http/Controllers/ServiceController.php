@@ -63,6 +63,17 @@ class ServiceController extends BaseVoyagerController
        
     }
 
+    public function web_coin(){
+    
+        $id=request()->id;
+        Log::info(request());
+        $coin=Coin::find($id);
+        $services = Service::all();
+
+        return view('coindetails')->with(compact('coin','services'));
+       
+    }
+
     public function web_pleasesignin(){
     
         return view('pleasesignin');

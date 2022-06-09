@@ -1,0 +1,22 @@
+.coin-page{
+   
+    margin-top:10%;
+    margin-bottom:10%;
+}
+.coin-service-image{
+    border-radius: 80%;
+    margin-left: 25%;
+    margin-top: 15%;
+
+}
+.service-card{
+    height:350px;
+    padding:29px;
+    margin-left: 2%;
+}
+
+.service-card:hover{
+    transform: scale(1.1);
+    box-shadow: inset;
+    
+}
