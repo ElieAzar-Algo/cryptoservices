@@ -5,8 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="fina project" content="">
+    <meta name="Elie Azar" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
     <title>Crypto Services- by Elie Azar</title>
@@ -114,13 +114,16 @@
 
                 <!-- ***** Mini Box Start ***** -->
                 <div class="row">
+                @foreach($coins as $coin)
+
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Get Ideas</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <i><img src="http://localhost:8000/storage/{{$coin->image}}"  width="60px" height="60px" alt=""></i>
+                            <strong>{{$coin->name}}</strong>
+                            <span>{{$coin->value}}USD/coin</span>
                         </a>
                     </div>
+                    @endforeach
      
                 </div>
                 <!-- ***** Mini Box End ***** -->
@@ -141,7 +144,6 @@
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>Donec tempus, sem non rutrum imperdiet, lectus orci fringilla nulla, at accumsan elit eros a turpis. Ut sagittis lectus libero.</p>
                     </div>
                 </div>
             </div>
@@ -153,12 +155,13 @@
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p>
+                            <p>I have earned my first 1000 USD from crypto trading using the signal service provided by Elie Azar and his team. THANK YOU GYUS</p>
+
                             <div class="user-image">
                                 {{-- <img src="http://placehold.it/60x60" alt=""> --}}
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">Catherine Soft</h3>
+                                <h3 class="user-name">Dr.Noura Rifai </h3>
                                 <span>Managing Director</span>
                             </div>
                         </div>
@@ -171,12 +174,12 @@
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat nibh. Cras maximus venenatis molestie.</p>
+                            <p>Big Thanks for Elie Azar for providing this amazing services, I really got impressed of what that team has developed to faciliate our trading journey</p>
                             <div class="user-image">
                                 {{-- <img src="http://placehold.it/60x60" alt=""> --}}
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">Kelvin Wood</h3>
+                                <h3 class="user-name">Dr. Mario Maroun</h3>
                                 <span>Digital Marketer</span>
                             </div>
                         </div>
@@ -189,12 +192,12 @@
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante ultrices molestie. Ut vehicula et diam at aliquam.</p>
+                            <p>I am so happy with using your services and i really encourage all this websites visitors to subscribe for the AI bot service which is incredible.</p>
                             <div class="user-image">
                                 {{-- <img src="http://placehold.it/60x60" alt=""> --}}
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">David Martin</h3>
+                                <h3 class="user-name">Dr. Ahmad Kassem</h3>
                                 <span>Website Manager</span>
                             </div>
                         </div>

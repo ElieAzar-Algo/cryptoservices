@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Service;
 use App\Models\Payment;
+use App\Models\Coin;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
 
@@ -15,8 +16,9 @@ class ServiceController extends BaseVoyagerController
     public function web_index(){
         Log::info("services list");
         $services = Service::all();
+        $coins = Coin::all();
         Log::info($services);
-        return view('welcome')->with(compact('services'));
+        return view('welcome')->with(compact('services','coins'));
     }
 
     public function web_view(){
