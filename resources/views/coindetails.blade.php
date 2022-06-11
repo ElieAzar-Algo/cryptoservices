@@ -4,7 +4,9 @@
  
     <div class="row ">
         <div class="col-4">
-            <img src="http://localhost:8000/storage/{{$coin->image}}">
+            {{-- <img src="http://localhost:8000/storage/{{$coin->image}}"> --}}
+            <img src="http://localhost:8000/storage/{{$coin->image}}" height="300" width="300" class="coinimage">
+
         </div>
         <div class="col-8">
             <h1>{{$coin->name}}</h1>
