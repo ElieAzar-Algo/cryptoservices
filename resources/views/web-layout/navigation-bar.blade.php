@@ -17,8 +17,11 @@
                         <li><a href="#pricing-plans">Pricing Tables</a></li>
                         <li><a href="/contactus">Contact Us</a></li>
                         @auth
+                        <li><a href={{route('myprofile')}}>My Profile</a></li>
                         <li><a href={{route('logout')}}>Logout</a></li>
                         @else
+                        <li><a href="/admin/login">Login</a></li>
+                        <li><a href="/registerform">Register</a></li>
                         @endauth
                     </ul>
                     <a class='menu-trigger'>

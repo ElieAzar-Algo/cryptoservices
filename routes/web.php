@@ -30,6 +30,8 @@ Route::post('/pay', 'App\Http\Controllers\ServiceController@web_pay')->name('pay
 Route::post('/message', 'App\Http\Controllers\ServiceController@web_message')->name('message');
 Route::get('/contactus', 'App\Http\Controllers\ServiceController@web_contactus')->name('contactus');
 Route::get('/coin', 'App\Http\Controllers\ServiceController@web_coin')->name('coin');
+Route::get('/myprofile', 'App\Http\Controllers\ServiceController@web_profile')->name('myprofile');
+
 
 
 Route::get('/registerform', 'App\Http\Controllers\AuthController@showregister')->name('registerform');

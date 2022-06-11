@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 use App\Models\Service;
 use App\Models\Payment;
 use App\Models\Coin;
+use App\Models\User;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
 
@@ -74,6 +75,16 @@ class ServiceController extends BaseVoyagerController
        
     }
 
+    public function web_profile(){
+    
+        $id=auth()->id();
+        Log::info(request());
+        $user=User::where('id', $id)->with('payments')->first();
+        Log::info($user);
+
+        return view('myprofile')->with(compact('user'));
+       
+    }
     public function web_pleasesignin(){
     
         return view('pleasesignin');

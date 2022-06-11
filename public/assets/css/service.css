@@ -1,6 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
+.ptable{
+  width:100%;
+  margin-left:20%;
+  justify-content:center ;
+  background-color:#bb70e6;
+  font-weight: 400;
+  
+
+}
+  .ptable th td{
+  font-weight: 900;
+  }
+.ptable tr:hover{
+ border-bottom: green;
+ background-color: #92bCa6;
+ transform: scale(1.1);
+ font-weight: 900;
+}
+.ptable td{
+  text-align: center;
+}
+.detailsimage{
+  border-radius: 60%;
+  border:3px solid rgb(165, 82, 229);
+
+
+}
 .service-ava{
     border-radius: 80%;
     margin:50% 20%;

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Payment;
+
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -25,6 +27,11 @@ class User extends \TCG\Voyager\Models\User
         'avatar',
         'settings'
     ];
+
+    public function payments(){
+        return $this->hasMany('App\Models\Payment','userid','id');
+    }
+ 
 
     /**
      * The attributes that should be hidden for serialization.
