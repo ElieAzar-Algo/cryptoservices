@@ -2,13 +2,13 @@
 @include('web-layout.css-link')
 <div class="container coin-page">
  
-    <div class="row ">
-        <div class="col-4">
+    <div class="row">
+        <div class="col-xs-9 col-lg-3 main-coin-img">
             {{-- <img src="http://localhost:8000/storage/{{$coin->image}}"> --}}
-            <img src="http://localhost:8000/storage/{{$coin->image}}" height="300" width="300" class="coinimage">
+            <img src="http://localhost:8000/storage/{{$coin->image}}" height="80%" width="60%" class="coinimage">
 
         </div>
-        <div class="col-8">
+        <div class="col-xs-12 col-lg-8">
             <h1>{{$coin->name}}</h1>
             <h5>{{$coin->value}} USD</h5>
             <br>
@@ -18,7 +18,7 @@
     </div>
     <div class="row mt-5">
         @foreach($services as $service)
-        <div class="col-3 card service-card">
+        <div class="col-xs-8 col-sm-6 col-md-4 col-lg-3 card service-card">
             <a href='{{route('service',"id=$service->id")}}' style="color: inherit; text-decoration: inherit;">
             <div class="coin-service">
                 <h4>{{$service->name}}</h4>
