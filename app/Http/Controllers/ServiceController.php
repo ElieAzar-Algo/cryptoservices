@@ -11,6 +11,7 @@ use App\Models\Coin;
 use App\Models\User;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
+use Carbon\Carbon;
 
 class ServiceController extends BaseVoyagerController
 {

@@ -1487,6 +1487,20 @@ footer .social li a {
   transition: all 0.3s ease 0s;
 }
 
+footer .social li a i{
+  height: 100%;
+}
+
+footer .fa{
+
+  display: inline-flex;
+}
+footer .fa:before {
+
+  align-self: center;
+}
+
+
 footer .social li a:hover {
   background-color: #ff589e;
   color: #fff;

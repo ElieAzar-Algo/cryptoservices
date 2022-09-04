@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
+.service-container{
+  margin-top: 9rem;
+  margin-bottom:5%;
+}
 .coinimage {
 
   border-radius: 60%;
@@ -33,6 +37,7 @@
 .detailsimage {
   border-radius: 60%;
   border: 3px solid rgb(165, 82, 229);
+  object-fit: cover;
 
 
 }
@@ -42,23 +47,11 @@
   margin: 50% 20%;
 }
 
-.service-content {
-  margin-top: 10%;
-}
-
 .center {
   position: absolute;
   top: 70%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-}
-
-.paybtn {
-  margin-left: 45%;
-}
-
-.paycard {
-  margin-left: 30%;
 }
 
 .card {

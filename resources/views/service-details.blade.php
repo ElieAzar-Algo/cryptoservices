@@ -1,27 +1,26 @@
 @include('web-layout.navigation-bar2')
 @include('web-layout.css-link')
-    {{--                         rebuild this page                   --}}
-<div class="center">
+<div class="container d-flex justify-content-center service-container" >
 
-  <h1>rebuild this page</h1>
-
-    {{-- <div class="service-content">
-        <div class="row paybtn mb-4">
-
+<div class="row">
+    <div class='col'>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
             @auth
-                <button class="btn btn-danger mb-4" onclick="showsection()">
+                <button class="btn btn-danger" onclick="showsection()">
                     Get Service
                 </button>
             @else
-                <a href='/pleasesignin'> <button class="btn btn-danger mb-4">
+                <a href='/pleasesignin'> <button class="btn btn-danger">
                         Get Service
                     </button>
                 </a>
             @endauth
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col">
+        <div class="row d-flex justify-content-center mt-3">
+            <div class='col-6'>
                 <form hidden name="payform" class="payform" action="{{ route('pay') }}" method="post">
 
                     @csrf
@@ -55,11 +54,14 @@
                         </tr>
 
                     </table>
+                    <div class='d-flex justify-content-center'>
                     <img class="paycard"src="assets/images/creditcard.png" heigh="150px" width="300px" />
+                  </div>
                 </form>
             </div>
         </div>
 
+    
         <div id="cardgreen" class="row card green">
             <div class="additional">
                 <div class="user-card">
@@ -109,15 +111,17 @@
                 <span class="more">Mouse over the card for more info</span>
             </div>
         </div>
-
+    
+    </div>
     </div>
     <div class="row">
    
-    </div> --}}
-
-
-
+    </div>
 </div>
+
+
+
+
 @include('web-layout.footer')
 @include('web-layout.js-link')
 
