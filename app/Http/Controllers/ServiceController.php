@@ -98,5 +98,21 @@ class ServiceController extends BaseVoyagerController
        
     }
 
+    public function predict(){
+    
+
+
+
+        // $output = exec('python3 /pythonScripts/AIPrediction.py');
+        $output = exec('python3 /home/elieazar/Desktop/Main-Desktop/AUL/spring2022/WebDev/final/cryptoservices/pythonScripts/AIPrediction.py');
+
+        $output_array = json_decode($output);
+        
+        Log::info($output_array);
+
+        return view('prediction')->with(compact('output'));
+       
+    }
+
 
 }
