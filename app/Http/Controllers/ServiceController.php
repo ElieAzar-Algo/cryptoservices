@@ -115,17 +115,50 @@ class ServiceController extends BaseVoyagerController
     public function predict()
     {
         if (auth()->user()) {
-            // $output = exec('python3 /pythonScripts/AIPrediction.py');
-            $output = exec('python3 /home/elieazar/Desktop/Main-Desktop/AUL/spring2022/WebDev/final/cryptoservices/pythonScripts/AIPrediction.py');
-
-            $output_array = json_decode($output);
-
-            Log::info($output_array);
-
-            return view('prediction')->with(compact('output'));
+            $user= User::where('id',auth()->user()->id)->with('payments')->first();
+            $purchases = $user->payments;
+            $purid= array();
+        
+            foreach($purchases as $purchase){
+              array_push($purid,$purchase->serviceid );
+            }
+        
+            if (in_array("3", $purid)){
+                // $output = exec('python3 /pythonScripts/AIPrediction.py');
+                $output = exec('python3 /home/elieazar/Desktop/Main-Desktop/AUL/spring2022/WebDev/final/cryptoservices/pythonScripts/AIPrediction.py');
+                $output_array = json_decode($output);
+                return view('prediction')->with(compact('output'));
+            }else{
+                return redirect()->route('service', "id=3");
+            }
         } else {
             return redirect()->route('service', "id=3");
         }
+    }
+
+    public function uploadpp(){
+        if (auth()->user()) {
+
+            $request = request();
+            if ($request->hasFile('profileImage')) {
+                $filenameWithExt = $request->file('profileImage')->getClientOriginalName ();// Get Filename
+                $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);// Get just Extension
+                $extension = $request->file('profileImage')->getClientOriginalExtension();// Filename To store
+                $fileNameToStore = $filename. "_". time().".".$extension;// Upload Image$path = 
+                $date = now()->format('FY');
+                $request->file('profileImage')->storeAs('public/users/'.$date, $fileNameToStore);
+                $user= User::where('id',auth()->user()->id)->first();
+                $user->avatar = 'users/'.$date.'/'.$fileNameToStore;
+                $user->save();
+            }
+
+        return back()
+                ->with('success','You have successfully upload image.');
+        } else {
+            return redirect()->route('home');
+        }
+
+
     }
 
     public function delPayment(){

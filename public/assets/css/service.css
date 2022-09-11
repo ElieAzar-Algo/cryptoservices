@@ -38,8 +38,7 @@
   border-radius: 60%;
   border: 3px solid rgb(165, 82, 229);
   object-fit: cover;
-
-
+margin-bottom: 20px;
 }
 
 .service-ava {
@@ -224,13 +223,45 @@
 .sc_head{
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: #ff589e;
+  background-color: #9274f4;
+
   margin-top: 5%;
 
 
 }
   .sc_head:hover {
-    background-color: #8261ee;
+  background-color: #ff589e;
+
+  }
+
+  a.main-button-slider_2 {
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 12px 20px;
+    background-color: #9274f4;
+
+
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.25px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  a.main-button-slider_2:hover {
+    background-color: #ff589e;
+
+  }
+  .sc_head span{
+    font-size:medium;
+  }
+  .sc_head h4{
+    margin-top: 20px;
+  }
+  .sc_head p{
+    margin-bottom: 20px;
   }
 
   .sc_body{
@@ -239,4 +270,9 @@
 
   .s_card{
     height: 300px;
+  }
+
+  .pimage a{
+
+   font-size: smaller;
   }

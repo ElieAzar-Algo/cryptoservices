@@ -3,15 +3,23 @@
 <div class="container coin-page">
  
     <div class="row ">
-        <div class="col-sm-9 col-lg-3">
+        <div class="col-sm-9 col-lg-3 text-center pimage">
             <img src="http://localhost:8000/storage/{{$user->avatar}}" height="200" width="200" class="detailsimage">
+            <br>
+            <a onclick="uploadImage()" href='#'>Change Profile Image</a>
+            <div>
+            <form hidden  id="uploadField" action={{route('uploadpp')}} method="post" enctype="multipart/form-data" style="display:flex; padding:10px">
+                @csrf
+              <input name="profileImage" type="file" id="form-control">
+              <input style="padding-left:10px" type="submit" name="submit" value="Submit" onclick="uploadImage()">
+            </form>  
+        </div>
         </div>
         <div class="col-sm-9 col-lg-6">
             <h1>{{$user->name}}</h1>
             <h5>Email: {{$user->email}} USD</h5>
-            
             <br>
-            <p>You can find a list of your purchased services in the table below</p>
+            <p>You can find a list of your purchased services below</p>
            
         </div>
     </div>
@@ -24,7 +32,7 @@
               <h4>{{$payment->servicename}}</h4>
             </div>
             <br>
-            <h1>{{$payment->price}} $</h1>
+            <h1><span>$</span>{{$payment->price}}<span>/month</span></h1>
             <p class="text-center">Valid Until : 
                 {{$payment->created_at->addHour(720)->format('Y-m-d')}}
             </p>
@@ -32,41 +40,22 @@
         <div class="sc_body">
         
             <div class="text-center">
-                <a href={{route('startPredict')}} class="main-button-slider">Predict Now</a>
+                <a href={{route('startPredict')}} class="main-button-slider_2">Use this service</a>
                 <br><br>
                 <a href={{route('delPayment')}}>Unsucbscibe</a>
             </div>
         </div>
       </div>
-      @endforeach 
-    
-      
+      @endforeach   
     </div>
-     
-    {{-- <div class="row mt-3 mypaments">
-        <div class="col-9">
-        <table class="ptable" border="2"}>
-            
-                <th>
-                    <td><strong>Service Name</strong></td>
-                    <td><strong>Price</strong></td>
-                    <td><strong>Card Number</strong></td>
-                    <td><strong>Created at</strong></td>
-                </th>
-            
-            @foreach($user->payments as $payment)
-            <tr>
-                <td></td>
-                <td>{{$payment->servicename}}</td>
-                <td>{{$payment->price}} $</td>
-                <td>{{$payment->cardnumber}}</td>
-                <td>{{$payment->created_at}}</td> 
-            </tr>
-            @endforeach 
-        </table>        
-    </div>
-    </div> --}}
 </div>
+
+<script>
+   function uploadImage(){
+        
+        document.getElementById('uploadField').hidden = !document.getElementById('uploadField').hidden
+    }
+</script>
 
 
 @include('web-layout.footer')

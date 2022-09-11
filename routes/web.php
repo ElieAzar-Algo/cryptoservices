@@ -32,6 +32,7 @@ Route::post('/message', 'App\Http\Controllers\ServiceController@web_message')->n
 Route::get('/contactus', 'App\Http\Controllers\ServiceController@web_contactus')->name('contactus');
 Route::get('/coin', 'App\Http\Controllers\ServiceController@web_coin')->name('coin');
 Route::get('/myprofile', 'App\Http\Controllers\ServiceController@web_profile')->name('myprofile');
+Route::post('/uploadpp', 'App\Http\Controllers\ServiceController@uploadpp')->name('uploadpp');
 Route::get('/startPredict', 'App\Http\Controllers\ServiceController@startPredict')->name('startPredict');
 Route::get('/predict', 'App\Http\Controllers\ServiceController@predict')->name('predict');
 
