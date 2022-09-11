@@ -163,5 +163,9 @@ class ServiceController extends BaseVoyagerController
 
     public function delPayment(){
 
+       $id = request()->id;
+       $payment=Payment::find($id);
+       $payment->delete();
+       return back()->with('success','Task deleted successfully');
     }
 }

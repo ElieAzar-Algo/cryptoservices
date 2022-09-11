@@ -42,7 +42,7 @@
             <div class="text-center">
                 <a href={{route('startPredict')}} class="main-button-slider_2">Use this service</a>
                 <br><br>
-                <a href={{route('delPayment')}}>Unsucbscibe</a>
+                <a href={{route('delPayment', ['id' => $payment->id])}}>Unsucbscibe</a>
             </div>
         </div>
       </div>
