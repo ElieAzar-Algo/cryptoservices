@@ -44,7 +44,7 @@
                             <td>
 
                                 <input hidden type='number' name='serviceid' value={{ $service->id }}>
-                                <input hidden type='text' name='servicename' value={{ $service->name }}>
+                                <input hidden type='text' name='servicename' value="{{ $service->name }}">
                             </td>
                             <td>
 

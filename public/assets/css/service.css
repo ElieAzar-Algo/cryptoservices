@@ -217,3 +217,26 @@
   right: 1rem;
   font-size: 0.9em;
 }
+
+
+/* my profile service card */
+
+.sc_head{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #ff589e;
+  margin-top: 5%;
+
+
+}
+  .sc_head:hover {
+    background-color: #8261ee;
+  }
+
+  .sc_body{
+    margin-top: 20%;
+  }
+
+  .s_card{
+    height: 300px;
+  }

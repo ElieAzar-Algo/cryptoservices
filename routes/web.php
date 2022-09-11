@@ -27,10 +27,12 @@ Route::get('/home', 'App\Http\Controllers\ServiceController@web_index');
 Route::get('/service', 'App\Http\Controllers\ServiceController@web_view')->name('service');
 Route::get('/pleasesignin', 'App\Http\Controllers\ServiceController@web_pleasesignin')->name('pleasesignin');
 Route::post('/pay', 'App\Http\Controllers\ServiceController@web_pay')->name('pay');
+Route::delete('/delPayment', 'App\Http\Controllers\ServiceController@delPay')->name('delPayment');
 Route::post('/message', 'App\Http\Controllers\ServiceController@web_message')->name('message');
 Route::get('/contactus', 'App\Http\Controllers\ServiceController@web_contactus')->name('contactus');
 Route::get('/coin', 'App\Http\Controllers\ServiceController@web_coin')->name('coin');
 Route::get('/myprofile', 'App\Http\Controllers\ServiceController@web_profile')->name('myprofile');
+Route::get('/startPredict', 'App\Http\Controllers\ServiceController@startPredict')->name('startPredict');
 Route::get('/predict', 'App\Http\Controllers\ServiceController@predict')->name('predict');
 
 

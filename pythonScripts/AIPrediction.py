@@ -94,4 +94,4 @@ fig = go.Figure(data=[candlestick])
 fig.show()
 
 
-print("The expected closing price in 1hr is " + str(pred_price[0][0]))
+print(str(pred_price[0][0]))
