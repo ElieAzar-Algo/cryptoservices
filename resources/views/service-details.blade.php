@@ -20,36 +20,44 @@
     </div>
 
         <div class="row d-flex justify-content-center mt-3">
-            <div class='col-6'>
+            <div class='col-12 table-responsive' style="overflow-x:auto">
                 <form hidden name="payform" class="payform" action="{{ route('pay') }}" method="post">
 
                     @csrf
-                    <table>
+                    <table class="table payTable">
 
-                        <tr>
-                            <td><input class="form-control" placeholder="your name"type='text' name='name'></td>
+                        <tr >
+                            <td>
+                                <input class="form-control" placeholder="your name"type='text' name='name'>
+                            </td>
                             <td>
                                 <input class="form-control" type='number' placeholder="card number" name='cardnumber'>
+                            </td>
+                        </tr>
 
+                        <tr> 
+                            <td>
+                                <input class="form-control" type='number' name='price' placeholder="amount" value={{ $service->price }}>
                             </td>
                             <td>
-                                <input class="form-control" placeholder="03-Aug-2024" type='date' name='expirydate'>
-
+                                {{-- <input class="form-control" placeholder="expirydate" type='date' name='expirydate'> --}}
+                                <input type="text" class="form-control" name="input" placeholder="Expiry date MM-YY" required 
+                                    pattern="(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))" 
+                                    title="Enter a date in this format MM-YY"/>
                             </td>
+                          
+                        </tr>
+
+                        <tr>
                             <td>
-
-                                <input class="form-control" type='number' name='price' value={{ $service->price }}>
-
-                            </td>
-                            <td>
-
                                 <input hidden type='number' name='serviceid' value={{ $service->id }}>
                                 <input hidden type='text' name='servicename' value="{{ $service->name }}">
                             </td>
-                            <td>
-
-                                <input type="submit" name="submit" value="Pay Now" class="btn btn-success">
-
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" name="submit" value="Pay Now" class="btn btn-success" style="display: block;
+                                margin: auto;">
                             </td>
                         </tr>
 

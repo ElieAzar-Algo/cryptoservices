@@ -10,10 +10,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
-
-
 use Illuminate\Support\Facades\Auth;
 use TCG\Voyager\Facades\Voyager;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -30,7 +29,16 @@ class AuthController extends Controller
         Log::info("helloooo register");
         Log::info(request());
         $request=request();
-        event(new Registered($user = User::create($request->all())));
+        event(new Registered($user = User::create(
+            [
+            'role_id' => '2',
+            'avatar' => $request->avatar,
+            'settings' => NULL,
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            ]
+        )));
 
         $this->guard()->login($user);
 

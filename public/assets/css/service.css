@@ -9,29 +9,10 @@
   border-radius: 60%;
 }
 
-.ptable {
-  width: 100%;
-  margin-left: 20%;
-  justify-content: center;
-  background-color: #bb70e6;
-  font-weight: 400;
 
+.payTable tr td input{
+  width: fit-content;
 
-}
-
-.ptable th td {
-  font-weight: 900;
-}
-
-.ptable tr:hover {
-  border-bottom: green;
-  background-color: #92bCa6;
-  transform: scale(1.1);
-  font-weight: 900;
-}
-
-.ptable td {
-  text-align: center;
 }
 
 .detailsimage {

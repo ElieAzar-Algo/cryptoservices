@@ -10,12 +10,14 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="/" class="active">Home</a></li>
-                        <li><a href="#features">About</a></li>
+                        <li><a href="/" >Home</a></li>
+                        <li><a href="#home-services">Services</a></li>
                         <li><a href="#work-process">Work Process</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#pricing-plans">Pricing Tables</a></li>
                         <li><a href="/contactus">Contact Us</a></li>
+                        <li><a href="#features">About</a></li>
+
                         @auth
                         <li><a href={{route('myprofile')}}>My Profile</a></li>
                         <li><a href={{route('logout')}}>Logout</a></li>

@@ -40,7 +40,7 @@
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Features Small Start ***** -->
-    <section class="section home-feature">
+    <section class="section home-feature" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -52,10 +52,10 @@
                                   
                         
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" 
-                        
+                        id="home-services"
                         data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
                         <a href='{{route('service',"id=$service->id")}}'>    
-                            <div class="features-small-item">
+                            <div class="features-small-item" >
                                 <div class="icon">
                                     <i><img class="headlogo" src="http://localhost:8000/storage/{{$service->image}}"  width="90px" height="90px" alt=""></i>
                                 </div>

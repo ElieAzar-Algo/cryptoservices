@@ -8,8 +8,8 @@
                     <h1>We provide the best <strong>Services</strong><br>to grow up your <strong>investment plan</strong></h1>
                     <p>Crupto service  is a professional trading team powered by LazarusFX Elie Azar 
                     </p>
-                    <a href={{route('startPredict')}} class="main-button-slider">Discover More</a>
-                    {{-- <a href="#features" class="main-button-slider">Discover More</a> --}}
+                    
+                    <a href="#features" class="main-button-slider">Discover More</a>
                 </div>
                 
             </div>
