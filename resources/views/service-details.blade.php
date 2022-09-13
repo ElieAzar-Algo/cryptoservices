@@ -40,10 +40,10 @@
                                 <input class="form-control" type='number' name='price' placeholder="amount" value={{ $service->price }}>
                             </td>
                             <td>
-                                {{-- <input class="form-control" placeholder="expirydate" type='date' name='expirydate'> --}}
-                                <input type="text" class="form-control" name="input" placeholder="Expiry date MM-YY" required 
+                                <input class="form-control" placeholder="expirydate" type='date' name='expirydate'>
+                                {{-- <input type="text" class="form-control" name="input" placeholder="Expiry date MM-YY" required 
                                     pattern="(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))" 
-                                    title="Enter a date in this format MM-YY"/>
+                                    title="Enter a date in this format MM-YY"/> --}}
                             </td>
                           
                         </tr>

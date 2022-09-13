@@ -118,7 +118,10 @@
 
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href={{route('coin',"id=$coin->id")}} class="mini-box">
-                            <i><img src="http://localhost:8000/storage/{{$coin->image}}"  width="60px" height="60px" alt=""></i>
+                            <i><img src="http://localhost:8000/storage/{{$coin->image}}"  width="60px" height="60px" alt="" style="
+                                object-fit: cover;
+                                border-radius: 60%;
+                            "></i>
                             <strong>{{$coin->name}}</strong>
                             <span>{{$coin->value}}USD/coin</span>
                         </a>
@@ -247,7 +250,7 @@
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
+                            <a href='{{route('service',"id=$service->id")}}' class="main-button">Purchase Now</a>
                         </div>
                     </div>
                 </div>

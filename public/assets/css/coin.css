@@ -9,6 +9,11 @@
     margin-top: 15%;
 
 }
+
+.coin-img{
+    object-fit: cover;
+    border-radius: 60%;
+}
 .service-card{
     height:350px;
     padding:29px;
