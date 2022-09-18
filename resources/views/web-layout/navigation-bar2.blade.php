@@ -1,3 +1,6 @@
+<head>
+    <title>Crypto Services- by Elie Azar</title>
+    </head>
 <header class="header-area header-sticky">
     <div class="container">
         <div class="row">

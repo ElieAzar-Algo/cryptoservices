@@ -39,7 +39,8 @@ Route::post('/uploadpp', 'App\Http\Controllers\ServiceController@uploadpp')->nam
 Route::get('/startPredict', 'App\Http\Controllers\ServiceController@startPredict')->name('startPredict');
 Route::get('/predict', 'App\Http\Controllers\ServiceController@predict')->name('predict');
 
-
+Route::get('chatroom', 'App\Http\Controllers\BotManController@index')->name('chatroom');
+Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
 
 Route::get('/registerform', 'App\Http\Controllers\AuthController@showregister')->name('registerform');
 Route::post('/register', 'App\Http\Controllers\AuthController@postregister')->name('postregister');

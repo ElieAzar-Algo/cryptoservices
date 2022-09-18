@@ -40,7 +40,13 @@
         <div class="sc_body">
         
             <div class="text-center">
-                <a href={{route('startPredict')}} class="main-button-slider_2">Use this service</a>
+            @if ($payment->serviceid ==3 || $payment->serviceid ==1)
+            <a href={{route('startPredict')}} class="main-button-slider_2">Use this service</a>
+                
+            @elseif($payment->serviceid ==2)
+            <a href={{route('chatroom')}} class="main-button-slider_2">Use this service</a>
+
+            @endif
                 <br><br>
                 <a href={{route('delPayment', ['id' => $payment->id])}}>Unsucbscibe</a>
             </div>
