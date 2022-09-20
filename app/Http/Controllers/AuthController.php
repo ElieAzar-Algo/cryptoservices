@@ -16,13 +16,10 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    use
-     RegistersUsers;
+    use  RegistersUsers;
 
-    public function showregister(){
-      
-        return $this->showRegistrationForm();
-       
+    public function showregister(){  
+        return $this->showRegistrationForm();   
     }
 
     public function postregister(){
@@ -45,21 +42,15 @@ class AuthController extends Controller
         if ($response = $this->registered($request, $user)) {
             return $response;
         }
-
         return $request->wantsJson()
                     ? new JsonResponse([], 201)
-                    : redirect($this->redirectPath());
-        
+                    : redirect($this->redirectPath());      
     }
 
 
     public function logout()
     {
-        Auth::logout();
-
+      Auth::logout();
       return  Voyager::view('voyager::login');
     }
-
-  
-
 }

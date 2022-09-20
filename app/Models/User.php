@@ -32,7 +32,6 @@ class User extends \TCG\Voyager\Models\User
         return $this->hasMany('App\Models\Payment','userid','id');
     }
  
-
     /**
      * The attributes that should be hidden for serialization.
      *

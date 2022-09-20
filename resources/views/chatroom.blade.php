@@ -13,7 +13,7 @@
     <script>
         var botmanWidget = {
             aboutText: 'ssdsd',
-            introMessage: "✋ Hi! I'm form Tutsmake.org"
+            introMessage: "✋ Hi! I'm form LazarusFX-Defi and I am ready to help in any concern related to the Blockchain, Crypto World and Defi-DOA"
         };
     </script>
    

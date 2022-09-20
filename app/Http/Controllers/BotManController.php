@@ -37,11 +37,11 @@ class BotManController extends Controller
    
             if (fnmatch("* digital wallet*",$message)) {
                 $this->askWallet($botman);
-            }elseif(fnmatch("* wallet address*",$message)){
+            }elseif(fnmatch("*wallet address*",$message)){
                 $this->askAddress($botman);
-            }elseif(fnmatch("* bitcoin*",$message)){
+            }elseif(fnmatch("*bitcoin*",$message)){
                 $this->askBitcoin($botman);
-            }elseif(fnmatch("* defi*",$message)){
+            }elseif(fnmatch("*defi*",$message)){
                 $this->askDefi($botman);
             }elseif(fnmatch('*blockchain*',$message)){
                 $this->askBlockchain($botman);

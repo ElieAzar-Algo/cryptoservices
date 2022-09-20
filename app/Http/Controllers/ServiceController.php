@@ -57,7 +57,6 @@ class ServiceController extends BaseVoyagerController
         $payment = Payment::create([
             'userid' => auth()->id(),
             'serviceid' => $request->serviceid,
-
             'name' => auth()->user()->name,
             'cardnumber' => $request->cardnumber,
             'expirydate' => $request->expirydate,
@@ -71,34 +70,29 @@ class ServiceController extends BaseVoyagerController
 
     public function web_coin()
     {
-
         $id = request()->id;
         Log::info(request());
         $coin = Coin::find($id);
         $services = Service::all();
-
         return view('coindetails')->with(compact('coin', 'services'));
     }
 
     public function web_profile()
     {
-
         $id = auth()->id();
         Log::info(request());
         $user = User::where('id', $id)->with('payments')->first();
         Log::info($user);
-
         return view('myprofile')->with(compact('user'));
     }
+
     public function web_pleasesignin()
     {
-
         return view('pleasesignin');
     }
 
     public function web_contactus()
     {
-
         return view('contactus');
     }
 
@@ -112,6 +106,7 @@ class ServiceController extends BaseVoyagerController
             return redirect()->route('service', "id=3");
         }
     }
+    
     public function predict()
     {
         if (auth()->user()) {
